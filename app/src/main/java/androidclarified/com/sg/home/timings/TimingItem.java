@@ -1,7 +1,7 @@
 package androidclarified.com.sg.home.timings;
 
 /**
- * Created by krazybee on 22/12/17.
+ * Created by Irshad on 22/12/17.
  */
 
 public class TimingItem {
