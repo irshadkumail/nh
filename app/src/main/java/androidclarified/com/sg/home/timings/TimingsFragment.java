@@ -42,45 +42,4 @@ public class TimingsFragment extends Fragment implements TimingsContract.View {
     }
 
 
-    private class TimingRecyclerAdapter extends RecyclerView.Adapter<TimingViewholder>{
-
-        TimingRecyclerAdapter()
-        {
-
-        }
-
-
-        @Override
-        public TimingViewholder onCreateViewHolder(ViewGroup parent, int viewType) {
-            return null;
-        }
-
-        @Override
-        public void onBindViewHolder(TimingViewholder holder, int position) {
-
-        }
-
-        @Override
-        public int getItemCount() {
-            return 0;
-        }
-    }
-
-    private class TimingViewholder extends RecyclerView.ViewHolder{
-
-        TextView salahName,salahTime,salahampm;
-
-        public TimingViewholder(View itemView) {
-            super(itemView);
-
-            salahName=itemView.findViewById(R.id.salah_name);
-            salahTime=itemView.findViewById(R.id.salah_time);
-            salahampm=itemView.findViewById(R.id.salah_time_ampm);
-
-        }
-
-
-    }
-
-
 }
