@@ -38,7 +38,7 @@ public class TimingRecyclerAdapter extends RecyclerView.Adapter<TimingRecyclerAd
         return 0;
     }
 
-    private class TimingViewholder extends RecyclerView.ViewHolder{
+    public class TimingViewholder extends RecyclerView.ViewHolder{
 
         TextView salahName,salahTime,salahampm;
 

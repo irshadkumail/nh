@@ -1,5 +1,7 @@
 package androidclarified.com.sg.network;
 
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -9,14 +11,20 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RequestBuilder {
 
-    public static final String BASE_URL="";
+    public static final String BASE_URL="http://api.aladhan.com";
 
 
     public static Object setUpRequest(Class requestClass)
     {
 
+        HttpLoggingInterceptor httpLoggingInterceptor=new HttpLoggingInterceptor();
+
+        httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient okHttpClient=new OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build();
+
         Retrofit retrofit=new Retrofit.Builder()
                 .baseUrl(BASE_URL)
+                .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

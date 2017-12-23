@@ -9,8 +9,9 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
+        app:elevation="0dp"
         android:layout_height="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+        android:theme="@style/ToolBarTheme">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -28,17 +29,15 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="My App" />
-
         </FrameLayout>
-    </android.support.design.widget.AppBarLayout>
 
+    </android.support.design.widget.AppBarLayout>
 
     <android.support.design.widget.TabLayout
         android:layout_width="match_parent"
         android:id="@+id/tab_layout"
         app:tabMode="fixed"
         app:tabSelectedTextColor="@color/whitetext"
-        android:elevation="16dp"
         app:tabIndicatorColor="@color/whitetext"
         app:tabTextColor="@color/whitetext"
         android:layout_height="?attr/actionBarSize"

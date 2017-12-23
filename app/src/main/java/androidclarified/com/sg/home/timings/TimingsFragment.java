@@ -21,6 +21,7 @@ public class TimingsFragment extends Fragment implements TimingsContract.View {
     @BindView(R.id.timing_recycler)
     RecyclerView timingRecycler;
 
+    private TimingsContract.Actions actions;
 
 
     public static TimingsFragment newInstance()
@@ -37,9 +38,30 @@ public class TimingsFragment extends Fragment implements TimingsContract.View {
        View view=layoutInflater.inflate(R.layout.fragment_timings,parent,false);
 
         ButterKnife.bind(this,view);
-
+        initComponents();
         return view;
     }
 
+    public void initComponents()
+    {
+        actions=new TimingInteractor(this);
+        startFetchingTimings();
 
+    }
+
+    private void startFetchingTimings()
+    {
+        actions.fetchTimings();
+
+    }
+
+    @Override
+    public void fetchTimingsSuccess() {
+
+    }
+
+    @Override
+    public void fetchTimingFailure() {
+
+    }
 }

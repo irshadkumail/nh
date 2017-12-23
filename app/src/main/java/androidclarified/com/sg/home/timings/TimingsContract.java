@@ -10,12 +10,17 @@ public interface TimingsContract {
 
 
 
+
+        void fetchTimingsSuccess();
+
+        void fetchTimingFailure();
+
+
     }
 
     interface Actions{
 
-
-
+        void fetchTimings();
 
     }
 }
